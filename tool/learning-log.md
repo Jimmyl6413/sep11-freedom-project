@@ -13,6 +13,7 @@
 * I feel like this tutorial will help me get a hang of how games are made with kaboom and how different concepts work in kaboom js.
 ### 10/6/2024:
 * Began processing and trying to tinker with the Flappy Birds Tutorial video.
+* 
 
 
 <!--
