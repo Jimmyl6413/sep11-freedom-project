@@ -17,6 +17,12 @@
 
 ### 10/12/2024:
 * Ran into a problem that wasted 10 minutes of my time. When I tried importing the sprite, I typed spirte instead of sprite which was very hard to tell but thank god I remembered to look at the console to see what the problem was or else who knows how long it would of took me to realize.
+* Importing sprites
+* Learned how to make my sprites jump & move.
+* Learned how to set gravity.
+
+### 10/20/2024:
+*
 
 
 <!--
