@@ -13,7 +13,10 @@
 * I feel like this tutorial will help me get a hang of how games are made with kaboom and how different concepts work in kaboom js.
 ### 10/6/2024:
 * Began processing and trying to tinker with the Flappy Birds Tutorial video.
-* 
+* Learned how to use and import sprites to my IDE.
+
+### 10/12/2024:
+* Ran into a problem that wasted 10 minutes of my time. When I tried importing the sprite, I typed spirte instead of sprite which was very hard to tell but thank god I remembered to look at the console to see what the problem was or else who knows how long it would of took me to realize.
 
 
 <!--
