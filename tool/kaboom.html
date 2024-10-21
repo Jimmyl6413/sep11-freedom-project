@@ -28,7 +28,13 @@
 
             // initialize kaboom context
             kaboom();
-            loadSprite("dino", "sprites/dino.png");
+            loadSprite("dino", "sprites/redbird-upflap.png");
+            loadSprite("background", "sprites/background-night.png");
+            loadSprite("pipe", "sprites/pipe-green.png");
+
+            add([
+            sprite("background", {width: width(), height: height()}),
+            ]);
             // add a piece of text at position (120, 80)
             const player = add([
                 sprite("dino"),
@@ -38,6 +44,24 @@
                 body(),
             ]);
             setGravity(1600)
+
+            add([
+            sprite("pipe"),
+            pos(width() - 100, 400),
+            ]);
+            add([
+            sprite("pipe", {flipY: true}),
+            pos(width() - 100, -100),
+            ]);
+
+            // action("pipe", (pipe), => {
+            //     pipe.move(-160, 0)
+            // });
+
+            add([
+            text("Press SpaceBar to Jump"),
+            pos(0, 0)
+            ]);
 
             onKeyPress("space", () => {
     player.jump();
