@@ -24,28 +24,8 @@
 ### 10/20/2024:
 * Added a background img
 * Added text to the game
-*
-// Update loop for moving pipes
-function movePipes() {
-    const pipes = get('pipe'); // Get all pipes
-    pipes.forEach(pipe => {
-        pipe.move(-PIPE_SPEED * dt(), 0); // Move pipes left
-        // Remove pipes that have gone off-screen
-        if (pipe.pos.x < -PIPE_WIDTH) {
-            pipe.destroy();
-        }
-    });
-}
 
-// Game loop
-loop(1, () => {
-    spawnPipe();
-});
 
-// Update function
-action(() => {
-    movePipes();
-});
 
 
 <!--
