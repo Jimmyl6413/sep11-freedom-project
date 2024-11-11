@@ -25,6 +25,23 @@
 * Added a background img
 * Added text to the game
 
+### 11/4/24
+* Switched to using [phaser.io](https://phaser.io/) since Kaboom js is no longer updating its code and I want to make a pac-man game.
+* Imported phaser into a [html file](phaser.html) that I made for tinkering with phaser through CDN.
+
+### 11/6/24
+* Watched a [Youtube](https://www.youtube.com/watch?v=Oix_2NqrdRQ) tutorial on making a pac-man game.
+* It has multiple parts to it and the first part requires downloading a external tool that helps with coding the structures of pac-man.
+
+### 11/7/24
+* Downloaded [tiled](https://www.mapeditor.org/download.html) which is a platform that helps create 2D like shapes for 2D games.
+* I was unable to download it on school laptop as it was considered an "unsafe" platform.
+* I downloaded it on my personal laptop which means I would have to code the 2D shapes into my project from home.
+
+### 11/8/24
+* Began testing out the codes that I saw from a variety of tutorials.
+* This helped me see what different codes did and how they worked together.
+
 
 
 
