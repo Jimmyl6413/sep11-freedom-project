@@ -42,6 +42,10 @@
 * Began testing out the codes that I saw from a variety of tutorials.
 * This helped me see what different codes did and how they worked together.
 
+### 11/18/24
+* Started making my own custom tiles and structures on tiled.
+
+
 
 
 
