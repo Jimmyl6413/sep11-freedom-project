@@ -45,6 +45,13 @@
 ### 11/18/24
 * Started making my own custom tiles and structures on tiled.
 
+### 11/21/24
+* Ran into an issue with tiles.
+* Need to download a file with the blue tile templates to import into tiled.
+
+### 11/22/24
+* Starting to make a custom map and basic structures.
+
 
 
 
