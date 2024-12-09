@@ -52,6 +52,16 @@
 ### 11/22/24
 * Starting to make a custom map and basic structures.
 
+### 12/5/24
+* Downloaded the file with blue tiles and imported it to tiled.
+
+### 12/7/24
+* Began building and saved it in file as pacmantileset.json.
+* Testing out different things in tiles to see how things work.
+* Had a hard time understanding but figured it out eventually.
+
+### 12/8/24
+* Trying to figure out how I can import this to phaser.
 
 
 
