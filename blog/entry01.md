@@ -17,7 +17,7 @@ Managing my own time in this part of the freedom project was crucial because I h
 Being on task and maintaining focus is very important when it comes to finishing work on time. To help me maintian focus I like to be in a quite room with my phone or any distractions hidden away from my sight. Being able to maintain focus and finishing on task will do you a big favor after. It might feel tempting to just take a break and relax but trust me after You finish your work it feels 10x better relaxing. For this part of the Freedom Project is was very hard for me to stay on task and I often forgot to do work like my second learning log because there were work from other classes that were piling up. To help me stay on task in the future, I will be sure to not procrasinate and always keep a list of tasks that I have to finish on my phone.
 
 ## Next Steps
-I am looking forward on continuing on tinkering with phaser.js and learning more about what we will get into next!
+I am looking forward on continuing on tinkering with phaser.io and learning more about what we will get into next!
 
 
 
