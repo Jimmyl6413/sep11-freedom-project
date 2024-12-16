@@ -3,7 +3,7 @@
 
 ## Tinkering with my tool
 I've finalized my tool (Phaser.io) over the course of the past weeks and have started tinkering with my tool. I downloaded a [2D map maker](https://www.mapeditor.org/) to help me with making a game map for the game I want to make! This [video](https://www.youtube.com/watch?v=Oix_2NqrdRQ) helped me walk through how phaser worked and how I can use the map maker correctly & more efficiently.
-(img)
+![img](img/pac-man.png)
 The image above shows my progress so far on the map that I'm creating. I will be continuing to finish the map by the end of winter break.
 
 ## Engineering Design Process (EDP)
