@@ -1,7 +1,7 @@
 # Plan
 
-## Tool: 
-## Product: 
+## Tool: [phaser.io](https://phaser.io/)
+## Product: Pac-man game but better
 
 ---
 
@@ -9,13 +9,13 @@
 
 #### MVP
 
-- [ ] Task (deadline: X)
-  - [ ] Subtask (deadline: X)
+- [ ] Build map (deadline: 2/24/25)
+  - [ ] import map to phaser.io (deadline: 2/24/25)
 
 #### Beyond MVP
 
-- [ ] Task
-  - [ ] Subtask
+- [ ] add a second map/teleporter
+  - [ ] 
 
 
 <!-- EXAMPLE
