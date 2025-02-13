@@ -18,6 +18,7 @@
 
 - [ ] add a second map/teleporter
   - [ ] The stuff regenerates back onto the map after its eaten by the sprite
+- [ ] Trouble shoot any potential problems
 
 
 <!-- EXAMPLE
