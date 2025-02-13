@@ -11,11 +11,13 @@
 
 - [ ] Build map (deadline: 2/24/25)
   - [ ] import map to phaser.io (deadline: 2/24/25)
+- [ ] Add sprites (deadline: 3/13/25)
+ - [ ] Begin putting everything together to test if everything is function and works (deadline 3/31/25)
 
 #### Beyond MVP
 
 - [ ] add a second map/teleporter
-  - [ ] 
+  - [ ] The stuff regenerates back onto the map after its eaten by the sprite
 
 
 <!-- EXAMPLE
