@@ -2,7 +2,7 @@
 ##### 2/3/25
 
 ## Tinkering with my tool
-I've finalized my tool (Phaser.io) over the course of the past weeks and have started tinkering with my tool. I started [setting up](https://www.youtube.com/watch?v=frRWKxB9Hm0&list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no) my phaser js in my IDE as I continue to tinker with the [2D map maker](https://www.mapeditor.org/).
+I've finalized my tool (Phaser.io) over the course of the past weeks and have started tinkering with my tool. I started [setting up](https://www.youtube.com/watch?v=frRWKxB9Hm0&list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no) my phaser js in my IDE as I continue to tinker with the [2D map maker](https://www.mapeditor.org/). 
 
 ## Engineering Design Process (EDP)
 I am now in the second stage of the engineering design process. I will be tinkering with my tool [phaser.io](https://phaser.io/) every week. Next I will be approaching the third stage of the Engineering Design Process where we will be starting to do some building and deep diving.

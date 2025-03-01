@@ -1,31 +1,80 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phaser 3 Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <script src="game.js"></script>
 
-        <link href="https://cdn.jsdelivr.net/npm/phaser@v3.87.0/dist/phaser.min.js">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="style.css" rel="stylesheet" type="text/css" />
-        <style>
-            /* CSS */
+<script>
+const config = {
+    type: Phaser.AUTO,          // Use WebGL or Canvas based on browser support
+    width: 800,                 // Width of the game screen
+    height: 600,                // Height of the game screen
+    physics: {
+        default: 'arcade',      // Use Arcade Physics
+        arcade: {
+            gravity: { y: 0 },  // No gravity
+            debug: false        // Don't show physics debug information
+        }
+    },
+    scene: {
+        preload: preload,       
+        create: create,
+        update: update
+    }
+};
 
-        </style>
+// Create the Phaser game instance
+const game = new Phaser.Game(config);
 
-        <title>Title</title>
-    </head>
-    <body>
-        <!-- HTML -->
+// Preload assets for the game
+function preload() {
+    // Load an image asset for the player
+    this.load.image('player', 'https://phaser.io/content/tutorials/asset-pack/images/player.png');
+}
 
+// Create the game scene
+function create() {
+    // Create a player sprite at the center of the screen
+    this.player = this.physics.add.sprite(400, 300, 'player');
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- <script src="script.js"></script> -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.87.0/phaser.min.js"></script>
-        <script>
-            // JS
+    // Add keyboard input for player movement
+    this.cursors = this.input.keyboard.createCursorKeys();
+}
 
+// Update the game state (called every frame)
+function update() {
+    // Move player based on keyboard input
+    if (this.cursors.left.isDown) {
+        this.player.setVelocityX(-160); // Move left
+    } else if (this.cursors.right.isDown) {
+        this.player.setVelocityX(160);  // Move right
+    } else {
+        this.player.setVelocityX(0);    // Stop moving horizontally
+    }
 
-        </script>
-    </body>
+    if (this.cursors.up.isDown) {
+        this.player.setVelocityY(-160); // Move up
+    } else if (this.cursors.down.isDown) {
+        this.player.setVelocityY(160);  // Move down
+    } else {
+        this.player.setVelocityY(0);    // Stop moving vertically
+    }
+}
+
+</script>
+</body>
 </html>
