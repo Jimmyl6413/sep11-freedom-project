@@ -67,6 +67,16 @@
 * ALmost done making the map
 ![alt text](image.png)
 
+2/25/25
+* Started tinkering in my phaser2.html to tets out the movements and how everything works in phaser 3 js.
+* Continued to work on building the map and testing out codes.
+
+2/28/25
+* Finished building map and ready to import next week
+3/1/25
+* Made a small little moving cube in my phaser2.html.
+* able to move using arrow keys but more changes and modifications need to be made.
+
 
 <!--
 * Links you used today (websites, videos, etc)
