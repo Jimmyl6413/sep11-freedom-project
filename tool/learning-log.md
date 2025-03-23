@@ -77,6 +77,12 @@
 * Made a small little moving cube in my phaser2.html.
 * able to move using arrow keys but more changes and modifications need to be made.
 
+3/18/25
+* Continuing tinkering with codes and concepts of phaser js
+
+3/20/25
+* 
+
 
 <!--
 * Links you used today (websites, videos, etc)
