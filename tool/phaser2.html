@@ -1,161 +1,19 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phaser 3 Game</title>
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-        canvas {
-            display: block;
-        }
-    </style>
-</head>
-<body>
-    <script src="game.js"></script>
-
-<script>
-// const config = {
-//     type: Phaser.AUTO,          // Use WebGL or Canvas based on browser support
-//     width: 800,                 // Width of the game screen
-//     height: 600,                // Height of the game screen
-//     physics: {
-//         default: 'arcade',      // Use Arcade Physics
-//         arcade: {
-//             gravity: { y: 0 },  // No gravity
-//             debug: false        // Don't show physics debug information
-//         }
-//     },
-//     scene: {
-//         preload: preload,
-//         create: create,
-//         update: update
-//     }
-// };
-
-// // Create the Phaser game instance
-// const game = new Phaser.Game(config);
-
-// // Preload assets for the game
-// function preload() {
-//     // Load an image asset for the player
-//     this.load.image('player', 'https://phaser.io/content/tutorials/asset-pack/images/player.png');
-// }
-
-// // Create the game scene
-// function create() {
-//     // Create a player sprite at the center of the screen
-//     this.player = this.physics.add.sprite(400, 300, 'player');
-
-//     // Add keyboard input for player movement
-//     this.cursors = this.input.keyboard.createCursorKeys();
-// }
-
-// // Update the game state (called every frame)
-// function update() {
-//     // Move player based on keyboard input
-//     if (this.cursors.left.isDown) {
-//         this.player.setVelocityX(-160); // Move left
-//     } else if (this.cursors.right.isDown) {
-//         this.player.setVelocityX(160);  // Move right
-//     } else {
-//         this.player.setVelocityX(0);    // Stop moving horizontally
-//     }
-
-//     if (this.cursors.up.isDown) {
-//         this.player.setVelocityY(-160); // Move up
-//     } else if (this.cursors.down.isDown) {
-//         this.player.setVelocityY(160);  // Move down
-//     } else {
-//         this.player.setVelocityY(0);    // Stop moving vertically
-//     }
-// }
-
-</script>
-</body>
-</html> -->
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phaser 3 Bouncing Ball</title>
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-        canvas {
-            display: block;
-        }
-    </style>
-</head>
-<body>
-    <script>
-        // Phaser 3 Game Configuration
-        var config = {
-            type: Phaser.AUTO,
-            width: 800,
-            height: 600,
-            scene: {
-                preload: preload,
-                create: create,
-                update: update
-            }
-        };
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 
-        // Create the Phaser Game Instance
-        var game = new Phaser.Game(config);
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.70.0/phaser-arcade-physics.min.js" integrity="sha512-HUbl7YU9UJEwoU8NQpzzBxd+I+qSbyiUKojO4RHfGzIadFeNcDcHc5nAINtX8dsHAXJn/2pqhwwiEWFXl+6OgA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        // Variables for the ball and velocity
-        var ball;
-        var ballVelocityX = 200;
-        var ballVelocityY = 200;
+  </head>
+  <body>
+     <div id="container">
 
-        // Preload function (load assets)
-        function preload() {
-            this.load.image('ball', 'https://examples.phaser.io/assets/sprites/blue_ball.png');
-        }
+     </div>
 
-        // Create function (set up the game world)
-        function create() {
-            // Add ball sprite at the center of the screen
-            ball = this.physics.add.image(400, 300, 'ball');
-            ball.setBounce(1, 1); // Make it bounce
-            ball.setCollideWorldBounds(true); // Make it collide with the world bounds (edges)
-
-            // Set the ball's velocity
-            ball.setVelocity(ballVelocityX, ballVelocityY);
-
-            // Add input click to change the ball's direction
-            this.input.on('pointerdown', changeDirection, this);
-        }
-
-        // Update function (runs every frame)
-        function update() {
-            // Here we could add extra logic for more interactions or effects
-        }
-
-        // Function to change the ball's direction when clicked
-        function changeDirection() {
-            // Reverse the velocity when clicked
-            ballVelocityX = -ballVelocityX;
-            ballVelocityY = -ballVelocityY;
-            ball.setVelocity(ballVelocityX, ballVelocityY);
-        }
-    </script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
