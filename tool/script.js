@@ -85,7 +85,7 @@ class Pacman extends Phaser.Scene {
    const config = {
     type:Phaser.AUTO,
     width:464,
-    height:560,
+    height:595,
     parent:"container",
     backgroundColor:"#000000",
     physics:{
