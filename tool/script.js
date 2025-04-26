@@ -18,14 +18,14 @@ class Pacman extends Phaser.Scene {
       this.load.tilemapTiledJSON("map", "pacmantileset.json");
 
       // Load Pacman animation frames as spritesheets
-      this.load.spritesheet("pacman", "pacman characters/pacman/pacman0.png", { frameWidth: 32, frameHeight: 32 });
-      this.load.spritesheet("pacman1", "pacman characters/pacman/pacman1.png", { frameWidth: 32, frameHeight: 32 });
-      this.load.spritesheet("pacman2", "pacman characters/pacman/pacman2.png", { frameWidth: 32, frameHeight: 32 });
-      this.load.spritesheet("pacman3", "pacman characters/pacman/pacman3.png", { frameWidth: 32, frameHeight: 32 });
-      this.load.spritesheet("pacman4", "pacman characters/pacman/pacman4.png", { frameWidth: 32, frameHeight: 32 });
+      this.load.spritesheet("pacman", "sprites/pacman0.png", { frameWidth: 32, frameHeight: 32 });
+      this.load.spritesheet("pacman1", "sprites/pacman1.png", { frameWidth: 32, frameHeight: 32 });
+      this.load.spritesheet("pacman2", "sprites/pacman2.png", { frameWidth: 32, frameHeight: 32 });
+      this.load.spritesheet("pacman3", "sprites/pacman3.png", { frameWidth: 32, frameHeight: 32 });
+      this.load.spritesheet("pacman4", "sprites/pacman4.png", { frameWidth: 32, frameHeight: 32 });
 
       // Load the image used for dots
-      this.load.image("dot", "pacman items/dot.png");
+      this.load.image("dot", "sprites/dot(1).png");
   }
 
   create() {

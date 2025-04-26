@@ -4,7 +4,7 @@
 ## Freedom Project MVP (my version of pac-man, sheep-pac)
 First I started my making my map and importing it using phaser 3 js code.
 ![alt text](image-3.png)
-
+![alt text](image-4.png)
 ## Engineering Design Process (EDP)
 I am now in the Fourth stage of the engineering design process. I will start building anf finishing my MVP then move on to building Beyond the MVP.
 
