@@ -25,7 +25,7 @@ class Pacman extends Phaser.Scene {
       this.load.spritesheet("pacman4", "sprites/pacman4.png", { frameWidth: 32, frameHeight: 32 });
 
       // Load the image used for dots
-      this.load.image("dot", "sprites/dot(1).png");
+      this.load.image("dot", "sprites/dot.png");
   }
 
   create() {
