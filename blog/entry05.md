@@ -1,7 +1,7 @@
 # Entry 5
 ##### 4/26/2025
 
-## Freedom Project MVP (my version of pac-man, sheep-pac)
+## Freedom Project MVP (Pac-man game)
 First I started my making my map and importing it using phaser 3 js code.
 ![alt text](image-3.png)
 ![alt text](image-4.png)
