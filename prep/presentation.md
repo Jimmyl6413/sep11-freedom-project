@@ -1,16 +1,21 @@
 # Presentation Plan
 
 ## Hook
-* 
+* Image of pleasant goat and big wolf cartoon.
 
 ## Product
-* 
+* Show my product but then show what I was originally planning on making but I didn't have time to finish because I was procrasinating way to much.
 
 ## Process
-* 
+* process of making my product, challenges, success, takeaways
+* Code snippets of my script.js, sprites, etc
+* Takeaway:
+  * less PROCRASINATION
+  * Staying calm (no panicing)
+  * etc
 
 ## Conclusion
-* 
+* Thank you, good bye
 
 <!-- EXAMPLE
 
