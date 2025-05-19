@@ -9,21 +9,51 @@
         <link href="style.css" rel="stylesheet" type="text/css" />
         <style>
             /* CSS */
-            
+
         </style>
-        
+
         <title>Title</title>
     </head>
     <body>
         <!-- HTML -->
-        
-        
+
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- <script src="script.js"></script> -->
-        <script>
-            // JS
-            
-            
+        <script type="module">
+
+            // import kaboom.js
+            import kaboom from "https://unpkg.com/kaboom@3000.0.1/dist/kaboom.mjs";
+
+            // initialize kaboom context
+            kaboom();
+
+            // Load assets
+            loadSprite("goat", "/sprites/blueGoat.png")
+
+            // Set the gravity acceleration (pixels per second)
+            setGravity(1600)
+
+            // Add player game object
+            const player = add([
+                sprite("goat"),
+                pos(center()),
+                area(),
+                scale(0.2),
+                // body() component gives the ability to respond to gravity
+                body(),
+            ])
+
+            add([
+                rect(width(), 48),
+                outline(4),
+                area(),
+                pos(0, height() - 48),
+                // Give objects a body() component if you don't want other solid objects pass through
+                body({ isStatic: true }),
+            ])
+
+
         </script>
     </body>
 </html>
