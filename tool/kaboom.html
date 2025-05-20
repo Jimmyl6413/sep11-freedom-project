@@ -95,7 +95,7 @@
 
             // Display score at the top-right of the canvas
             const score = add([
-                text(`Score: ${scoreValue}`, { size: 24 }),
+                text("Score:" + scoreValue, { size: 24 }),
                 pos(50, 50),
                 color(0, 0, 0),
                 fixed(),
@@ -104,20 +104,22 @@
             // checks the win condition
             function checkWinCondition() {
                 if (scoreValue >= 150) { // get a score of 150 to win
-                    endGame(); // a 2nd function
+                    endGame("WOOOHOOO YOU WIN!!!!"); // a 2nd function
+                } else if (scoreValue <= 0) {
+                    endGame("GAME OVER YOU LOSE!")
                 }
             }
 
-            function endGame() {
-            // Stop the game (game is over)
-            get("fallingObject", (obj) => destroy(obj));
+            function endGame(message) {
+            // Stop spawning objects
+            get("fallingObject").forEach((obj) => destroy(obj));
 
             // Player disappears and the game is over
             player.hidden = true;
 
-            // Display "YOU WIN" text in black at the center
+            // Display game result message in black at the center
             add([
-                text(" WOOHOOO YOU WIN!!! ", { size: 64 }),
+                text(message, { size: 64 }),
                 pos(width() / 2, height() / 2),
                 color(0, 0, 0), // Black font color
                 anchor("center"),
@@ -128,9 +130,24 @@
             player.onCollide("grass", (g) => {
                 destroy(g); // Remove grass object
                 scoreValue += 5; // Increase score by 5
-                score.text = `Score: ${scoreValue}`; // Update the score display
+                score.text = "Score:" + scoreValue; // Update the score display
                 checkWinCondition(); // Check if player has won
 
+            });
+            // Player collides with wolf and loses 8 points
+            player.onCollide("wolf", (w) => {
+                destroy(w);
+                scoreValue -= 8;
+                score.text = "Score:" + scoreValue;
+                checkWinCondition();
+            });
+
+            // Player collides with pan and loses 2 points
+            player.onCollide("pan", (p) => {
+                destroy(p);
+                scoreValue -= 2;
+                score.text = "Score:" + scoreValue;
+                checkWinCondition();
             });
 
             spawnObject(); // calls the function
