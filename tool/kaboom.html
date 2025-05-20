@@ -25,12 +25,13 @@
             // import kaboom.js
             import kaboom from "https://unpkg.com/kaboom@3000.0.1/dist/kaboom.mjs";
 
-            // initialize kaboom context
+            // initialize kaboom game
             kaboom();
 
-            loadSprite("background", "sprites/sky.jpg");
-            const SPEED = 320
+            loadSprite("background", "sprites/sky.jpg"); // game background
+            const SPEED = 320 // speed of my player/character
 
+            //loads/adds the background
             add([
                 sprite("background"),
                 pos(0, 0),
@@ -39,46 +40,46 @@
             ]);
 
             // Load the sprites
-            const objs = ["wolf", "grass", "pan"];
+            const objs = ["wolf", "grass", "pan"]; // Array of my sprites
 
             for (const obj of objs) {
-                loadSprite(obj, `/sprites/${obj}.png`);
+                loadSprite(obj, `/sprites/${obj}.png`); // Goes through my sprites folder and array to find each sprite
             }
 
 
             // Load assets
             loadSprite("goat", "/sprites/blueGoat.png")
 
-            // Set the gravity acceleration (pixels per second)
+            // Sets the gravity for my player/character
             setGravity(1600)
 
-            // Add player game object
+            // loads the player into the game
             const player = add([
                 sprite("goat"),
                 pos(center()),
                 area(),
-                scale(0.2),
-                // respond to gravity so that the player
+                scale(0.2), // player's size
+                // respond to gravity so that the player would fall to the platform
                 body(),
             ])
 
-            //makes it so that the player does not move outside of the screen towards the left
+            //makes it so that the player does not move outside of the screen towards the left but player will move outside of the screen if it's to the right.
             onUpdate(() => {
                 player.pos.x = Math.max(0, Math.min(width(), player.pos.x));
             });
 
-            // Function to spawn falling objects
+            // Function to spawn the falling sprites/objects
             function spawnObject() {
                 const name = choose(objs);
                 add([
                     sprite(name),
                     area(),
-                    pos(rand(0, width()), 0), // Spawn at random position at the top
+                    pos(rand(0, width()), 0), // Spawn at random position at the top of the canvas
                     scale(0.1),
                     anchor("bot"),
                     "fallingObject",
                     name, // Assign tag with object name
-                    { speed: rand(80, 150) }, // Random fall speed
+                    { speed: rand(80, 150) }, // Random falling speeds
                 ]);
                 wait(0.5, spawnObject); // Continuously spawn objects
             }
@@ -90,9 +91,9 @@
                 }
             });
 
-            let scoreValue = 10;
+            let scoreValue = 10; // score value starts at 10
 
-            // Display score at the bottom-left
+            // Display score at the top-right of the canvas
             const score = add([
                 text(`Score: ${scoreValue}`, { size: 24 }),
                 pos(50, 50),
@@ -100,31 +101,30 @@
                 fixed(),
             ]);
 
-            // Function to check win condition
+            // checks the win condition
             function checkWinCondition() {
-                if (scoreValue >= 20) {
-                    endGame();
+                if (scoreValue >= 150) { // get a score of 150 to win
+                    endGame(); // a 2nd function
                 }
             }
 
             function endGame() {
-            // Stop spawning objects
+            // Stop the game (game is over)
             get("fallingObject", (obj) => destroy(obj));
 
-            // Stop player movement
+            // Player disappears and the game is over
             player.hidden = true;
 
             // Display "YOU WIN" text in black at the center
             add([
-                text("YOU WIN", { size: 64 }),
+                text(" WOOHOOO YOU WIN!!! ", { size: 64 }),
                 pos(width() / 2, height() / 2),
                 color(0, 0, 0), // Black font color
                 anchor("center"),
             ]);
         }
 
-
-            // Player collects grass when colliding with it
+            // Grass gets destroyed when player collides with it
             player.onCollide("grass", (g) => {
                 destroy(g); // Remove grass object
                 scoreValue += 5; // Increase score by 5
@@ -133,23 +133,23 @@
 
             });
 
-            spawnObject();
+            spawnObject(); // calls the function
 
 
-
+            // White platform that the Goat stands on
             add([
                 rect(width(), 48),
                 outline(4),
                 area(),
                 pos(0, height() - 48),
-                // Give objects a body() component if you don't want other solid objects pass through
+                // Give objects a body() component if you don't want other solid objects to pass through
                 body({ isStatic: true }),
             ])
 
 
-            // registers an event that runs every frame as long as user is holding a certain key
+            // registers an event that runs every frame as long as user is holding the left arrow key or right arrow key
             onKeyDown("left", () => {
-                // .move() is provided by pos() component, move by pixels per second
+                // player movespeed
                 player.move(-SPEED, 0)
             })
 
