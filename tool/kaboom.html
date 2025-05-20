@@ -28,6 +28,15 @@
             // initialize kaboom context
             kaboom();
 
+            loadSprite("background", "sprites/sky.jpg");
+
+            add([
+                sprite("background"),
+                pos(0, 0),
+                scale(0.7), // Adjust scale to fit the screen
+                fixed(), // Keeps the background static
+            ]);
+
             // Load assets
             loadSprite("goat", "/sprites/blueGoat.png")
 
