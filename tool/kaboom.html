@@ -38,6 +38,13 @@
                 fixed(), // Keeps the background static
             ]);
 
+            // Load the sprites
+            const objs = ["wolf", "grass", "pan"];
+
+            for (const obj of objs) {
+                loadSprite(obj, `/sprites/${obj}.png`);
+            }
+
             // Load assets
             loadSprite("goat", "/sprites/blueGoat.png")
 
@@ -58,6 +65,38 @@
             onUpdate(() => {
                 player.pos.x = Math.max(0, Math.min(width(), player.pos.x));
             });
+
+                        // Function to spawn falling objects
+function spawnObject() {
+    const name = choose(objs);
+    add([
+        sprite(name),
+        area(),
+        pos(rand(0, width()), 0), // Spawn at random position at the top
+        scale(0.1),
+        health(4),
+        anchor("bot"),
+        "fallingObject",
+        name, // Assign tag with object name
+        { speed: rand(80, 150) }, // Random fall speed
+    ]);
+    wait(0.5, spawnObject); // Continuously spawn objects
+}
+
+    onUpdate("fallingObject", (obj) => {
+    obj.move(0, obj.speed);
+    if (obj.pos.y - obj.height > height()) {
+        destroy(obj);
+    }
+});
+
+// Player collects grass when colliding with it
+player.onCollide("grass", (g) => {
+    destroy(g); // Remove grass object
+});
+
+spawnObject();
+
 
 
             add([
