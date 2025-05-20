@@ -68,7 +68,7 @@
 
             // Make the player jump when pressing space
             onKeyPress("space", () => {
-                if (player.isGrounded()) { // Ensures player can only jump when on the ground
+                if (player.isGrounded()) { // Ensures that the player can only jump when on the ground
                     player.jump(JUMP_FORCE);
                 }
             });
@@ -101,12 +101,16 @@
 
             wait(0.5, spawnObject); // Continuously spawn objects
         }
-                onUpdate("fallingObject", (obj) => {
-                obj.move(0, obj.speed);
-                if (obj.pos.y - obj.height > height()) {
+
+            // Updates falling objects by moving them downward
+            onUpdate("fallingObject", (obj) => {
+                obj.move(0, obj.speed); // Moves the object down at its set speed
+                if (obj.pos.y - obj.height > height()) { // If the object moves off-screen it gets destroyed
                     destroy(obj);
                 }
             });
+
+
 
             let scoreValue = 10; // score value starts at 10
 
