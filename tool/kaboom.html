@@ -58,10 +58,21 @@
                 sprite("goat"),
                 pos(center()),
                 area(),
-                scale(0.2), // player's size
+                scale(0.18), // player's size
                 // respond to gravity so that the player would fall to the platform
                 body(),
             ])
+
+            // Define jump force
+            const JUMP_FORCE = 600;
+
+            // Make the player jump when pressing space
+            onKeyPress("space", () => {
+                if (player.isGrounded()) { // Ensures player can only jump when on the ground
+                    player.jump(JUMP_FORCE);
+                }
+            });
+
 
             //makes it so that the player does not move outside of the screen towards the left but player will move outside of the screen if it's to the right.
             onUpdate(() => {
@@ -70,20 +81,26 @@
 
             // Function to spawn the falling sprites/objects
             function spawnObject() {
-                const name = choose(objs);
-                add([
-                    sprite(name),
-                    area(),
-                    pos(rand(0, width()), 0), // Spawn at random position at the top of the canvas
-                    scale(0.1),
-                    anchor("bot"),
-                    "fallingObject",
-                    name, // Assign tag with object name
-                    { speed: rand(80, 150) }, // Random falling speeds
-                ]);
-                wait(0.5, spawnObject); // Continuously spawn objects
+            const name = choose(objs);
+            let scaleSize = 0.1; // Default scale
+
+            if (name === "wolf") {
+                scaleSize = 0.4; // Make wolf 2x bigger
             }
 
+            add([
+                sprite(name),
+                area(),
+                pos(rand(0, width()), 0), // Spawn at random position at the top of the canvas
+                scale(scaleSize), // Apply the scale
+                anchor("bot"),
+                "fallingObject",
+                name, // Assign tag with object name
+                { speed: rand(80, 150) }, // Random falling speeds
+            ]);
+
+            wait(0.5, spawnObject); // Continuously spawn objects
+        }
                 onUpdate("fallingObject", (obj) => {
                 obj.move(0, obj.speed);
                 if (obj.pos.y - obj.height > height()) {
