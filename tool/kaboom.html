@@ -82,10 +82,10 @@
             // Function to spawn the falling sprites/objects
             function spawnObject() {
             const name = choose(objs);
-            let scaleSize = 0.1; // Default scale
+            let scaleSize = 0.1; // original scale factor
 
             if (name === "wolf") {
-                scaleSize = 0.4; // Make wolf 2x bigger
+                scaleSize = 0.4; // Makes the wolf sprite four times bigger than the other sprites
             }
 
             add([
