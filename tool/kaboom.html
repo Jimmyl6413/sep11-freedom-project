@@ -110,6 +110,29 @@
                 }
             });
 
+            // Timer setup
+            let timeLeft = 30; // 30 seconds to win or else user loses the game
+            const timerDisplay = add([
+                text("Time: " + timeLeft, { size: 24 }),
+                pos(50, 100),
+                color(0, 0, 0),
+                fixed(),
+            ]);
+
+            // Function to update the timer every second
+            function updateTimer() {
+                timeLeft--;
+                timerDisplay.text = "Time: " + timeLeft;
+
+                if (timeLeft <= 0) {
+                    endGame("TIME'S UP! GAME OVER!!! BOOO!");
+                } else {
+                    wait(1, updateTimer);
+                }
+            }
+
+            // Start the timer
+            updateTimer();
 
 
             let scoreValue = 10; // score value starts at 10
@@ -172,7 +195,6 @@
             });
 
             spawnObject(); // calls the function to allow the sprites to start falling
-
 
             // White platform that the Goat stands on
             add([
