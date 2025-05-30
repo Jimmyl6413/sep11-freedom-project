@@ -1,8 +1,16 @@
 # Entry 6
 ##### 5/28/25
 
+## Update
+We've reached the end of our year long project! We finished coding our websites, games, and apps and we presented what we all made!!! Everyone's Freedom Project was a success and we've more to come next in our senior year! Now we are beginning to wrap things up and we will add our freedom projects to our portfolio soon!
+
 ## Content/Reflection
 
+### In-Class Presentation
+For my in class presentation I made a [google slides presentation](https://docs.google.com/presentation/d/1QYZshDa0u8TcL1wVMPX-fnKzLCCHWXbV0naMe0PFzkA/edit?slide=id.g35c4111360f_1_31#slide=id.g35c4111360f_1_31) which goes through my challenges, success, and the purpose of my project. I had many takeaways from my in class presentation like public speaking, eye contact, enthusiasm. Through this Freedom project I really feel like I've had a significant breakthrough with my public speaking skills as both my presentation in class and at the expo went surprisingly well. I feel like I am now better at presenting in front of a bigger crowd and the way I found that out was by practicing what I was gonna present. That gave me confidence when I was presenting as my mind was clear on what points I wanted to make and how I want to introduce these points to lead into the next points in my presentation. However, I do see a grow and another breakthrough I can achieve because towards the end of my presentation I struggled to grasp my audience attention with the takeaways and conclusion. I want to be able to have a more detailed explanation for my takeaways and ending of my presentation. But Overall this was a great breakthrough for me and it meant a lot. I also realized how Procrasination is a bad habit and not good for us as most of my peers struggled with procrasination throughout their Freedom project. Through Mr. Muller's feedback email I understood that I need to make more eye contact with my audience. The in class presentation was a great success and breakthrough for me and it gave my more motivation to do even better in the upcoming days, months, and years.
+
+### Expo Elevator Pitch
+During our Expo elevator pitch we had one minute to present what we made and the purpose of what we made in which I had many takeaways. I was unable to create and elevator pitch for the day of the presentation as I was overwhelmed with work and adding an BEYOND MVP onto my project. However, I was well prepared for this presentation as I practiced over and over again on the way to school. Takeaway's I had from this presentation is getting straight to the point, being open with challenges and ideas, and well explanations and understanding of the audience. These were all important takeaways for me because I only had one minute to present my project which meant I needed to get straight to my points as quickly as possible after I hook my audience onto my [game](https://jimmyl6413.github.io/sep11-freedom-project/tool/kaboom.html). 
 
 
 
